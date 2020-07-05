@@ -9,8 +9,9 @@
 
 	<body>
 		<h1>Table Generator: Java Servlet Page (JSP)</h1>
+		<table>
 		<%!protected static String createTable(int row, int col) {
-			String html = "<table>\n";
+			String html = "";
 			for (int i = 1; i < row + 1; i++) {
 				html += "\n<tr>";
 				for (int j = 1; j < col + 1; j++) {
@@ -19,9 +20,9 @@
 				}
 				html += "\n</tr\n>";
 			}
-			html += "</table>";
 			return html;
 		}%>
 		<%= createTable(25, 10) %>
+		</table>
 	</body>
 </html>
